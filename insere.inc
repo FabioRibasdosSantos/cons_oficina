@@ -1,6 +1,6 @@
 <?php 
 
-include '../conecta_mysql.inc';
+include_once '../conecta_mysql.inc';
 
 $nome 			 	= $_POST['nome'];
 $cpf	  	 	 	= $_POST['cpf'];
@@ -24,3 +24,4 @@ if ($conexao->query($sql) === TRUE) {
 
 $conexao->close();
 
+?>

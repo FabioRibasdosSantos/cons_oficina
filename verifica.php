@@ -1,60 +1,67 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Verifica</title>
-	<meta charset="utf-8">
-</head>
-<body>
 <?php 
+
+include_once("conecta_mysql.inc");
 
 $nome 			 	= $_POST['nome'];
 $cpf	  	 	 	= $_POST['cpf'];
 $endereco	  		= $_POST['endereco'];
 $email  		 	= $_POST['email'];
 $fabricante 		= $_POST['fabricante'];
-$modelo				= $_POST['modelo']
-$ano 				= $_POST['ano']
-$cor 				= $_POST['cor']	
-$placa				= $_POST['placa']
+$modelo				= $_POST['modelo'];
+$ano 				= $_POST['ano'];
+$cor 				= $_POST['cor'];
+$placa				= $_POST['placa'];
 $observacoes	  	= $_POST['observacoes'];
 $erro 			 	= 0;
 
-//Verifica se o campo nome não está em branco
 if (empty($nome) OR strstr($nome, ' ')==false) {
 	echo "Favor digitar o seu nome corretamente.<br>";
 	$erro = 1;
 }
 
-//Verifica se o campo cidade está em branco
-if (empty($cpf)) {
-	echo "Favor digitar seu cpf.<br>";
+if (empty($cpf) ==false) {
+	echo "Favor digitar o seu cpf corretamente.<br>";
 	$erro = 1;
 }
 
-//Verifica se o campo curso está em branco
-if (empty($curso)) {
-	echo "Favor digitar o seu estado corretamente.<br>";
+if (empty($endereco) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
 	$erro = 1;
 }
 
-//Verifica se o campo email está preenchido corretamente
-if (strlen($email)< 8 || strstr($email, '@')==false) {
-	echo "Favor digitar o seu email corretamente.<br>";
+if (empty($email) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
 	$erro = 1;
 }
 
-//Verifica se o campo comentarios está vazio
-if (empty($dados_adicionais)) {
-	echo "Favor entre com algum comentário.<br>";
+if (empty($fabricante) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
 	$erro = 1;
 }
 
-//Verifica se não houve erro - neste caso chama a include para inserir os dados
-if ($erro == 0) {
-	echo "Todos os dados foram digitados corretamente.<br>";
-	include 'insere.inc';
+if (empty($modelo) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
+	$erro = 1;
+}
+
+if (empty($ano) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
+	$erro = 1;
+}
+
+if (empty($cor) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
+	$erro = 1;
+}
+
+if (empty($placa) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
+	$erro = 1;
+}
+
+if (empty($observacoes) ==false) {
+	echo "Favor digitar o seu nome corretamente.<br>";
+	$erro = 1;
 }
 
  ?>
-</body>
-</html>
