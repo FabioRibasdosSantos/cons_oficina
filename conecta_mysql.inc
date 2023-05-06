@@ -1,6 +1,6 @@
 <?php
 		//cria a conexao mysqli_connect('localizacao BD', 'usuario de acesso', 'senha', 'banco de dados')
-		$conexao = mysqli_connect('localhost', 'root', '', 'biblioteca');
+		$conexao = mysqli_connect('localhost', 'root', '', 'oficina');
 
 		//ajusta o charset de comunicação entre a aplicação e o banco de dados
 		mysqli_set_charset($conexao, 'utf8');

@@ -2,15 +2,19 @@
 
 include '../conecta_mysql.inc';
 
-$nome 		 		= $_POST['nome'];
-$cpf	  	 		= $_POST['cpf'];
-$curso	  	 		= $_POST['curso'];
-$horario  	 		= $_POST['horario'];
-$email 			 	= $_POST['email'];
-$dados_adicionais  	= $_POST['dados_adicionais'];
+$nome 			 	= $_POST['nome'];
+$cpf	  	 	 	= $_POST['cpf'];
+$endereco	  		= $_POST['endereco'];
+$email  		 	= $_POST['email'];
+$fabricante 		= $_POST['fabricante'];
+$modelo				= $_POST['modelo']
+$ano 				= $_POST['ano']
+$cor 				= $_POST['cor']	
+$placa				= $_POST['placa']
+$observacoes	  	= $_POST['observacoes'];
 
 $sql = "INSERT INTO cad_aluno VALUES";
-$sql .= "('$nome','$cpf', '$curso', '$horario', '$email' , '$dados_adicionais')";
+$sql .= "('$nome','$cpf', '$curso', '$endereco', '$email', '$fabricante', '$modelo', '$ano', '$cor', '$placa', '$observacoes')";
 
 if ($conexao->query($sql) === TRUE) {
 	echo  "Usuário incluído com sucesso!";
