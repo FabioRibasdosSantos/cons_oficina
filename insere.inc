@@ -14,7 +14,7 @@ $placa				= $_POST['placa']
 $observacoes	  	= $_POST['observacoes'];
 
 $sql = "INSERT INTO cad_aluno VALUES";
-$sql .= "('$nome','$cpf', '$curso', '$endereco', '$email', '$fabricante', '$modelo', '$ano', '$cor', '$placa', '$observacoes')";
+$sql = "('$nome','$cpf', '$curso', '$endereco', '$email', '$fabricante', '$modelo', '$ano', '$cor', '$placa', '$observacoes')";
 
 if ($conexao->query($sql) === TRUE) {
 	echo  "Usuário incluído com sucesso!";

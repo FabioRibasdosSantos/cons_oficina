@@ -6,14 +6,21 @@ include_once("conecta_mysql.inc");
 
 <html>
 <head>
-    <title> Consulta Livros </title>
+    <title> Consulta Oficina </title>
 </head>
 <body>
     <table align="center" border="1" style='width:50%'>
     <tr>
-        <th>Codigo do livro</th>
-        <th>Nome do Livro</th>
-        <th>Descrição do Livro</th>
+        <th>Cliente</th>
+        <th>CPF</th>
+        <th>Endereço</th>
+        <th>E-mail</th>
+        <th>Fabricante</th>
+        <th>Modelo</th>
+        <th>Ano</th>
+        <th>Cor</th>
+        <th>Placa</th>
+        <th>Observações</th>
     </tr>
 
 <?php
