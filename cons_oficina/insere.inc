@@ -7,14 +7,14 @@ $cpf	  	 	 	= $_POST['cpf'];
 $endereco	  		= $_POST['endereco'];
 $email  		 	= $_POST['email'];
 $fabricante 		= $_POST['fabricante'];
-$modelo				= $_POST['modelo']
-$ano 				= $_POST['ano']
-$cor 				= $_POST['cor']	
-$placa				= $_POST['placa']
+$modelo				= $_POST['modelo'];
+$ano 				= $_POST['ano'];
+$cor 				= $_POST['cor'];	
+$placa				= $_POST['placa'];
 $observacoes	  	= $_POST['observacoes'];
 
 $sql = "INSERT INTO cad_aluno VALUES";
-$sql = "('$nome','$cpf', '$curso', '$endereco', '$email', '$fabricante', '$modelo', '$ano', '$cor', '$placa', '$observacoes')";
+$sql .= "('$nome','$cpf', '$endereco', '$email', '$fabricante', '$modelo', '$ano', '$cor', '$placa', '$observacoes')";
 
 if ($conexao->query($sql) === TRUE) {
 	echo  "Usuário incluído com sucesso!";
