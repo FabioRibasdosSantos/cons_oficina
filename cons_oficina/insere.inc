@@ -21,7 +21,7 @@ VALUES('$nome', '$cpf', '$endereco', '$email', '$fabricante', '$modelo', '$ano',
 if ($conexao->query($sql) === TRUE) {
 	echo  "Usuário incluído com sucesso!";
 } else {
-	echo "Erro: " . $sql . "<br>" . $conexao->error;
+	echo "Erro: " . $resultado . "<br>" . $conexao->error;
 }
 
 $conexao->close();
