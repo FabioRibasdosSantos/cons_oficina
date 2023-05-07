@@ -1,6 +1,8 @@
 <?php 
 
-include_once '../conecta_mysql.inc';
+if(isset($_POST['submit]))
+
+include_once("conecta_mysql.inc");
 
 $nome 			 	= $_POST['nome'];
 $cpf	  	 	 	= $_POST['cpf'];
@@ -13,8 +15,8 @@ $cor 				= $_POST['cor'];
 $placa				= $_POST['placa'];
 $observacoes	  	= $_POST['observacoes'];
 
-$sql = "INSERT INTO cad_aluno VALUES";
-$sql .= "('$nome','$cpf', '$endereco', '$email', '$fabricante', '$modelo', '$ano', '$cor', '$placa', '$observacoes')";
+$resultado = mysqli_query ($conexao, "INSERT INTO cad_aluno (nome,cpf,endereco,email,fabricante,modelo,ano,cor,placa,observacoes)
+VALUES('$nome', '$cpf', '$endereco', '$email', '$fabricante', '$modelo', '$ano', '$cor', '$placa', '$observacoes')");
 
 if ($conexao->query($sql) === TRUE) {
 	echo  "Usuário incluído com sucesso!";
